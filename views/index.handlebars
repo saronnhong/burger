@@ -1,0 +1,38 @@
+{{!-- * Setup the `index.handlebars` to have the template that Handlebars can render onto.
+
+     * Create a button in `index.handlebars` that will submit the user input into the database. --}}
+
+
+<img src="/assets/img/burger.png" width="250px">
+
+
+<h2>Burger Of The Day</h2>
+
+<div class="row">
+  <div id = "devourCol1" class="col-md-6">
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div id = "devourCol2" class="col-md-6">
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+  <div class="form-group">
+    {{!-- <label for="comment">Add a Burger</label> --}}
+    <textarea class="form-control" rows="3" id="commentField" placeholder="Add a new Burger"></textarea>
+  </div>
+
+<button type="button" id="newBurgerButton" class="btn btn-primary">Submit</button>
+

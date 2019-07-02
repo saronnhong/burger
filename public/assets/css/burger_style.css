@@ -1,0 +1,21 @@
+#devourCol1, #devourCol2 {
+    text-align: left;
+}
+body {
+    background-color: rgb(242,208,39);
+    text-align: center;
+}
+
+
+li {
+    line-height: 2;
+}
+.form-control, .form-control:focus {
+    background-color: rgb(39,34,40);
+    color:rgb(229,229,229);
+    
+    
+}
+#textAddBurger {
+    text-align: center;
+}
