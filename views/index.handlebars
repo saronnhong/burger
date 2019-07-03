@@ -22,7 +22,7 @@
     <ul>
       {{#each burgers}}
       {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      <li>{{burger_name}}</li>
       {{/if}}
       {{/each}}
     </ul>
@@ -31,7 +31,7 @@
 
   <div class="form-group">
     {{!-- <label for="comment">Add a Burger</label> --}}
-    <textarea class="form-control" rows="3" id="commentField" placeholder="Add a new Burger"></textarea>
+    <textarea class="form-control" rows="1" id="commentField" placeholder="Add A New Burger"></textarea>
   </div>
 
 <button type="button" id="newBurgerButton" class="btn btn-primary">Submit</button>
